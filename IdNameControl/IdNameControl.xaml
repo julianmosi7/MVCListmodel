@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="IdNameControl.IdNameControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:IdNameControl"
+             mc:Ignorable="d" Height="139" Width="220">
+    <GroupBox Header="Selection">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Content="Id:" Grid.Column="0" Grid.Row="0"></Label>
+            <Label Content="Name:" Grid.Column="0" Grid.Row="1"></Label>
+            <Label Name="lblId" Content="//4" Grid.Column="1" Grid.Row="0"></Label>
+            <Label Name="lblName" Content="//Liesi" Grid.Column="1" Grid.Row="1"></Label>
+            
+        </Grid>
+    </GroupBox>
+</UserControl>

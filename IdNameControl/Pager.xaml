@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="IdNameControl.Pager"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:IdNameControl"
+             mc:Ignorable="d" Height="74.334" Width="377.487">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button Content="Down" FontSize="26" Grid.Column="0"></Button>
+        <Button Content="Up" FontSize="26" Grid.Column="1"></Button>
+    </Grid>
+</UserControl>
