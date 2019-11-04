@@ -1,12 +1,28 @@
-﻿<Window x:Class="MVCListmodel.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MVCListmodel"
+        xmlns:Controls="clr-namespace:Controls;assembly=IdNameControl" x:Class="MVCListmodel.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Loaded="MainWindow_OnLoaded"
+        Title="MainWindow" Height="450" Width="655.313">
+    <Grid x:Name="panMain">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <Controls:IdNameControl Grid.Column="0" Grid.Row="0"/>
+        <Controls:IdListControl Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="40"/>
+        <Controls:Pager Grid.Column="0" Grid.Row="1" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>

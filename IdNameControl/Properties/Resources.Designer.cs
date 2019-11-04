@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IdNameControl.Properties {
+namespace Controls.Properties {
     
     
     /// <summary>

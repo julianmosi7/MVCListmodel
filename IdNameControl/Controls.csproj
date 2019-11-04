@@ -94,5 +94,11 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ValueModel\ModelLib.csproj">
+      <Project>{8ABE3DB1-0157-42F4-BAB6-B033676C8397}</Project>
+      <Name>ModelLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

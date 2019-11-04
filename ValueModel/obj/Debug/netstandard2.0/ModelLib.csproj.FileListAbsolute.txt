@@ -1,0 +1,9 @@
+D:\Schule\4.Klasse\POS\Project8\MVCListmodel\ValueModel\bin\Debug\netstandard2.0\ModelLib.deps.json
+D:\Schule\4.Klasse\POS\Project8\MVCListmodel\ValueModel\bin\Debug\netstandard2.0\ModelLib.dll
+D:\Schule\4.Klasse\POS\Project8\MVCListmodel\ValueModel\bin\Debug\netstandard2.0\ModelLib.pdb
+D:\Schule\4.Klasse\POS\Project8\MVCListmodel\ValueModel\obj\Debug\netstandard2.0\ModelLib.csprojAssemblyReference.cache
+D:\Schule\4.Klasse\POS\Project8\MVCListmodel\ValueModel\obj\Debug\netstandard2.0\ModelLib.csproj.CoreCompileInputs.cache
+D:\Schule\4.Klasse\POS\Project8\MVCListmodel\ValueModel\obj\Debug\netstandard2.0\ModelLib.AssemblyInfoInputs.cache
+D:\Schule\4.Klasse\POS\Project8\MVCListmodel\ValueModel\obj\Debug\netstandard2.0\ModelLib.AssemblyInfo.cs
+D:\Schule\4.Klasse\POS\Project8\MVCListmodel\ValueModel\obj\Debug\netstandard2.0\ModelLib.dll
+D:\Schule\4.Klasse\POS\Project8\MVCListmodel\ValueModel\obj\Debug\netstandard2.0\ModelLib.pdb
