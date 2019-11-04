@@ -53,6 +53,7 @@ namespace Controls
             set
             {
                 model = value;
+                
                 model.ValueChanged += Model_ValueChanged;
             }
         }

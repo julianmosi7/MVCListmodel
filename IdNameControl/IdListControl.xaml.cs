@@ -38,6 +38,7 @@ namespace Controls
             get => Double.Parse(lblIdList.Content.ToString());
             set
             {
+                
                 model.Val = value;
             }
         }
@@ -50,31 +51,41 @@ namespace Controls
             get { return person; }
             set
             {
-                person = "Hansi - 1";                
+                person = $"Hansi - {1}";                
                 listBox.Items.Add(person);
-                person = "Pauli - 2";
+                person = $"Pauli - {2}";
                 listBox.Items.Add(person);
-                person = "Susi - 3";
+                person = $"Susi - {3}";
                 listBox.Items.Add(person);
-                person = "Franzi - 4";
+                person = $"Franzi - {4}";
                 listBox.Items.Add(person);
-                person = "Liesi - 5";
+                person = $"Liesi - {5}";
                 listBox.Items.Add(person);
-                person = "Heinzi - 6";
+                person = $"Heinzi - {6}";
                 listBox.Items.Add(person);
-
             }
         }
 
 
         private void model_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            
+            lblIdList.Content = e.Val;
+            listBox.SelectedItem = e.Val;
         }
 
         public IdListControl()
         {
             InitializeComponent();
+        }
+
+        private void lblIdList_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            model.Val = Double.Parse(lblIdList.Content.ToString());
+        }
+
+        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //model.Val = listBox.SelectedItem.ToString();
         }
     }
 }
