@@ -51,18 +51,7 @@ namespace Controls
             get { return person; }
             set
             {
-                person = $"Hansi - {1}";                
-                listBox.Items.Add(person);
-                person = $"Pauli - {2}";
-                listBox.Items.Add(person);
-                person = $"Susi - {3}";
-                listBox.Items.Add(person);
-                person = $"Franzi - {4}";
-                listBox.Items.Add(person);
-                person = $"Liesi - {5}";
-                listBox.Items.Add(person);
-                person = $"Heinzi - {6}";
-                listBox.Items.Add(person);
+                listBox.Items.Add(value);
             }
         }
 
