@@ -30,36 +30,18 @@ namespace Controls
             {
                 model = value;
                 model.ValueChanged += model_ValueChanged;
+                foreach (var item in model.dictionary)
+                {
+                    listBox.Items.Add($"{item.Key} - {item.Value}");
+                }
+                //in listbox speichern
             }
         }       
 
-        public double Val
-        {
-            get => Double.Parse(lblIdList.Content.ToString());
-            set
-            {
-                
-                model.Val = value;
-            }
-        }
-
-
-        private string person;
-
-        public string Person
-        {
-            get { return person; }
-            set
-            {
-                listBox.Items.Add(value);
-            }
-        }
-
-
         private void model_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            lblIdList.Content = e.Val;
-            listBox.SelectedItem = e.Val;
+            lblIdList.Content = e.ID;
+            listBox.SelectedItem = e.ID;
         }
 
         public IdListControl()
@@ -69,7 +51,7 @@ namespace Controls
 
         private void lblIdList_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            model.Val = Double.Parse(lblIdList.Content.ToString());
+            model.ID = Double.Parse(lblIdList.Content.ToString());
         }
 
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

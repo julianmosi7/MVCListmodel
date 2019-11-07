@@ -44,7 +44,6 @@ namespace MVCListmodel
                 if (control is Controls.IdListControl idlistcontrol)
                 {
                     idlistcontrol.Model = model;
-                    idlistcontrol.Person = person;
                 }           
                 if (control is Controls.Pager pager) pager.Model = model;
             }
