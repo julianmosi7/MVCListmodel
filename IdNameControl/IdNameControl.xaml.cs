@@ -60,7 +60,9 @@ namespace Controls
 
         private void Model_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            
+            double value = e.Val;
+            lblId.Content = value;
+            lblName.Content = value;
         }
 
         public IdNameControl()
