@@ -21,7 +21,9 @@ namespace Controls
     /// </summary>
     public partial class IdListControl : UserControl
     {
-        private ValueModel model;
+        private ValueModel model;        
+
+        Dictionary<string, int> dict = new Dictionary<string, int>();
 
         public ValueModel Model
         {
@@ -30,18 +32,19 @@ namespace Controls
             {
                 model = value;
                 model.ValueChanged += model_ValueChanged;
-                foreach (var item in model.dictionary)
+                dict = model.dictionary;
+                foreach (var item in dict)
                 {
                     listBox.Items.Add($"{item.Key} - {item.Value}");
-                }
-                //in listbox speichern
+                }                
             }
         }       
 
         private void model_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             lblIdList.Content = e.ID;
-            listBox.SelectedItem = e.ID;
+
+            listBox.SelectedIndex = e.ID - 1;      
         }
 
         public IdListControl()
@@ -51,12 +54,19 @@ namespace Controls
 
         private void lblIdList_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            model.ID = Double.Parse(lblIdList.Content.ToString());
+            model.ID = Int32.Parse(lblIdList.Content.ToString());
         }
 
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            //model.Val = listBox.SelectedItem.ToString();
+        {            
+            var index = listBox.SelectedIndex;            
+            foreach (var item in dict)
+            {
+                if(item.Value == index+1)
+                {
+                    model.ID = item.Value;                    
+                }
+            }            
         }
     }
 }

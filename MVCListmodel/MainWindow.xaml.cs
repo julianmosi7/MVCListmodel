@@ -20,11 +20,8 @@ namespace MVCListmodel
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
-        List<string> personnames;
-        private readonly ValueModel model = new ValueModel();
-        NameDialog namedialog = new NameDialog();
-        string person;
+    {        
+        private readonly ValueModel model = new ValueModel();             
 
         public MainWindow()
         {
@@ -39,54 +36,19 @@ namespace MVCListmodel
 
             foreach (UIElement control in panMain.Children)
             {
-
                 if (control is Controls.IdNameControl idnamecontrol) idnamecontrol.Model = model;
                 if (control is Controls.IdListControl idlistcontrol)
                 {
                     idlistcontrol.Model = model;
                 }           
                 if (control is Controls.Pager pager) pager.Model = model;
-            }
-
-            
-        }
-
-        /*
-        public void fill()
-        {            
-            personnames = namedialog.Persons;
-
-            Console.WriteLine(namedialog.Persons.Count);
-
-            foreach (var person in personnames)
-            {
-                Console.WriteLine("persons");
-                Console.WriteLine(person);
-            }
-
-            foreach (UIElement control in panMain.Children)
-            {
-
-                if (control is Controls.IdNameControl idnamecontrol) idnamecontrol.Model = model;
-                if (control is Controls.IdListControl idlistcontrol)
-                {
-                    idlistcontrol.Model = model;
-                    foreach (var person in personnames)
-                    {
-                        Console.WriteLine(person);
-                        idlistcontrol.Person = person;
-                    }
-                }
-                if (control is Controls.Pager pager) pager.Model = model;
-            }
-        }
-        */
+            }            
+        }        
 
         private void Model_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             //nur eigene Controls setzen
-        }
-        
+        }        
 
     }
 }

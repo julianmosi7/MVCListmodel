@@ -21,6 +21,9 @@ namespace Controls
     /// </summary>
     public partial class Pager : UserControl
     {
+        int id;
+                
+
         private ValueModel model;
 
         public ValueModel Model
@@ -28,19 +31,29 @@ namespace Controls
             get { return model; }
             set
             {
-                model = value;
+                model = value;                
                 model.ValueChanged += Model_ValueChanged;
             }
         }
 
         private void Model_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            
+            id = e.ID;
         }
 
         public Pager()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click_Up(object sender, RoutedEventArgs e)
+        {
+            model.ID = id + 1;
+        }
+
+        private void Button_Click_Down(object sender, RoutedEventArgs e)
+        {
+            model.ID = id - 1;
         }
     }
 }

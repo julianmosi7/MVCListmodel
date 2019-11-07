@@ -7,7 +7,7 @@ namespace ModelLib
     {
         public event EventHandler<ValueChangedEventArgs> ValueChanged;
 
-        public Dictionary<string, int> dictionary;
+        public Dictionary<string, int> dictionary;        
 
         public ValueModel()
         {
@@ -20,19 +20,19 @@ namespace ModelLib
             dictionary.Add("Heinzi", 6);
         }
 
+        private int id;
 
-        private double id;
-
-        public double ID
+        public int ID
         {
             get => id;
             set 
             {
-                //value dictionary
                 id = value;
-                ValueChanged?.Invoke(this, new ValueChangedEventArgs { ID = id });
+                if (id <= dictionary.Count && id > 0)
+                {                    
+                    ValueChanged?.Invoke(this, new ValueChangedEventArgs { ID = id });
+                }                
             }
         }
-
     }
 }

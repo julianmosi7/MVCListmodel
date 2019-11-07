@@ -11,7 +11,7 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Button Content="Down" FontSize="16" Grid.Column="0"></Button>
-        <Button Content="Up" FontSize="16" Grid.Column="1"></Button>
+        <Button Content="Down" FontSize="16" Grid.Column="0" Click="Button_Click_Up"></Button>
+        <Button Content="Up" FontSize="16" Grid.Column="1" Click="Button_Click_Down"></Button>
     </Grid>
 </UserControl>

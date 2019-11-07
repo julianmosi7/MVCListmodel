@@ -6,6 +6,6 @@ namespace ModelLib
 {
     public class ValueChangedEventArgs : EventArgs
     {
-        public double ID { get; set; }
+        public int ID { get; set; }
     }
 }

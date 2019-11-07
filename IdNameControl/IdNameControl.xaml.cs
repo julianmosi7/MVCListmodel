@@ -20,49 +20,34 @@ namespace Controls
     /// Interaction logic for UserControl1.xaml
     /// </summary>
     public partial class IdNameControl : UserControl
-    {
-        private string id;
-
-        public string Id
-        {
-            get { return id; }
-            set 
-            { 
-                id = value;
-                lblId.Content = id; 
-            }
-        }
-
-        private string name;
-
-        public string PersonName
-        {
-            get { return name; }
-            set 
-            {
-                name = value;
-                lblId.Content = name; 
-            }
-        }
-
+    {     
+               
         private ValueModel model;
+
+        Dictionary<string, int> dict = new Dictionary<string, int>();
+
 
         public ValueModel Model
         {
             get { return model; }
             set
             {
-                model = value;
-                
+                model = value;                
                 model.ValueChanged += Model_ValueChanged;
+                dict = model.dictionary;
             }
         }
 
         private void Model_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            double value = e.Val;
-            lblId.Content = value;
-            lblName.Content = value;
+            foreach (var item in dict)
+            {
+                if(item.Value == e.ID)
+                {
+                    lblId.Content = item.Value;
+                    lblName.Content = item.Key;
+                }
+            }
         }
 
         public IdNameControl()

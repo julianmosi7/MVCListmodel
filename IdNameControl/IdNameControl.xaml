@@ -19,8 +19,8 @@
 
             <Label Content="Id:" Grid.Column="0" Grid.Row="0"></Label>
             <Label Content="Name:" Grid.Column="0" Grid.Row="1"></Label>
-            <Label Name="lblId" Content="//4" Grid.Column="1" Grid.Row="0"></Label>
-            <Label Name="lblName" Content="//Liesi" Grid.Column="1" Grid.Row="1"></Label>
+            <Label Name="lblId" Content="ID" Grid.Column="1" Grid.Row="0"></Label>
+            <Label Name="lblName" Content="NAME" Grid.Column="1" Grid.Row="1"></Label>
 
         </Grid>
     </GroupBox>
